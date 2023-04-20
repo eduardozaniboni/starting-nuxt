@@ -6,10 +6,13 @@
       provident quis id rerum, explicabo iure quia itaque eos rem minima facilis
       accusamus assumenda amet labore accusantium fugit corporis error?
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script lang="ts"></script>
+<script setup lang="ts">
+const { data } = await useFetch("/api/currency/USD");
+</script>
 
 <style scoped>
 h2 {
